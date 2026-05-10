@@ -1,0 +1,2 @@
+*For installing bootstrap
+- You must pick a specific file directory na pagiinstallan mo para ma read ng mismong webpage kapag ininmport mo sa main.jsx

@@ -1,0 +1,8 @@
+*For pulling:
+- For pulling you just need to install dapat ung .git from official website then do 
+1. git configs
+2. go to the target directories using cd and ls 
+3. do git init
+4. do git clone https://github.com/kyndredd/upako_web.git 
+Note the link can be change dipende sa kung ano ang icloclone mo, cloning means gaining the 
+copies of that files into your local repo

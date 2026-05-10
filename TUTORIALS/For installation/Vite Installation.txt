@@ -1,0 +1,17 @@
+For installation of Vite in Windows:
+1. Install nodejs at https://nodejs.org/en/download
+- the exe file is named: node-v24.15.0-x64
+
+For installing vite:
+Note: it needs nodejs to be install first since dependency un ng vite
+https://www.youtube.com/watch?v=VZ6Qpe3sjhM
+
+For installing react: 
+Note: When npm create vite@latest can be install in your main local disk, then once project file is create dun mo mismo sa directory ng project file na ginawa mo iinstall ung mismong react
+https://www.youtube.com/watch?v=BlbX3fzKwu4
+
+For how to use react router for navigating other pages in a web:
+https://www.youtube.com/watch?v=BlbX3fzKwu4
+
+First bago ka mag npm create vite@latest then you must go to your desired directories para sa
+dun ka mag npm create vite@latest, like mag cmd ka and cd C:\Users\Admin\Desktop\KBME\KBME\WEBDEV\For installation then mag npm create kana then dun kana pili ng flavor and framework then yes lang to install, then andun na nakainstall ung mga src code and libraries para sa iyong directory na napili
