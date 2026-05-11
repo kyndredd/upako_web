@@ -94,6 +94,3 @@ na ung password once nagpupush
 
 
 - git conf
-
-*FOR UPAKO_WEB folder:
--token generate key: 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
