@@ -1,0 +1,99 @@
+Note: Actually ang basa ko dito sa git is like para syang tingen
+ko language for cmd na nasa pc mo and language sya for interacting
+sa mismong github website. It is use to create file paths or 
+directories sa main pc mo (syempre ung directories naun may special
+properties na pwedeng makapaginteract sa github since you use git
+to create it, un ung .git folder andun ung mga dependencies for
+you and other developer na to enable git function like push and pull
+for that specific directory).
+
+Ang idea dito is you create a file path or directories sa pc mo
+then ipupush mo ung directories naun sa github then it will now 
+enable other developers na makuha ung directories na un by pulling.
+Ung file path or directories na un is parang repisotory pero it will
+be consider as local repisotory since ung file path mo is nasa pc
+pa pero once push it will now be a public repository na.
+
+.git folder is a folder that has files in it for tracking your
+directory without this your directory cannot be tracked, push
+or pull
+
+(This video is for creating github repository)
+Reference: https://www.youtube.com/watch?v=0M51U-pEJD4&t=1665s
+*Steps on creating repository:
+
+- git config - to state your name and email add para malaman kung 
+             sino ang nagcommit or push or pull
+git config --global user.name "Kenneth"
+git config --global user.email "ken@example.com"
+
+- cd to your target directory
+cd "name of path"
+cd .. to get back
+
+- git init - when done magkakaroon na ng .git ung directory for it
+           to be able to be commited sa repo and pushed
+If wrong directory do rm -rf .git
+
+- git status - check files that are not yet commited
+
+- git add - git add the files to be commited
+
+- git rm --cached - to untrack a specific file
+
+- git restore - to restore the last edit file 
+
+- touch .gitignore - to create .gitignore file
+Note: this .gitignore file you can put the file here for it to be
+ignore meaning that specific file cannot be push or track. Inorder
+for it to not be tracked you must untarack the file first so that
+.gitignore can see it must be untracked.
+
+- git commit -m "your message" - in order for it to be ready to be 
+                                 pushed or like it is commited so
+                                 it is changed or need to submit 
+                                 parang ganun
+
+- create github repository para dun ipupush ung commited local 
+files (can be public or private, can also add readme file)
+
+- git remote add origin https.....git - use in order to ready it to
+be push publicly in your github repository, the https comes in the
+website of github nakalagay dun sa directory kung pano mo sya ma
+reremote push
+
+- git branch -M main - used for creating main branch
+
+- git push -u origin main - used to push it so that it can be 
+visible in your github repository
+
+- onced pushed a pop up will appear just put your github username
+and your key token at github.com/settings/tokens 
+
+- onced push then makita na ung directory sa github website 
+lezzgoo
+
+*For creating branch 
+- git branch "branch name" - to create branch in your local repo
+
+- git checkout "branch name" - to go to that specific branch
+
+- git branch --list - to display the existing branches 
+
+- git branch -d "branch name" - to delete that branch
+
+- git checkout -b feature - shortcut for create and go to that 
+                            branch
+
+- git pull origin main 
+Note use this to get the updated repo in your github repo. By this 
+you get the latest repo 
+
+- git config --global credential.helper wincred - para ma bypass
+na ung password once nagpupush
+
+
+- git conf
+
+*FOR UPAKO_WEB folder:
+-token generate key: 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

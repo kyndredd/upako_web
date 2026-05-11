@@ -1,14 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <form>
+        <div style={{margin: "10px"}}>
+          Username  
+          <input 
+            type="text"
+            placeholder="Input prefer username"
+            style={{marginLeft: "10px"}}
+          />
+        </div>
+        <div>
+          Password  
+          <input
+            type="text"
+            style={{marginLeft: "10px", marginBottom: "20px"}}
+          />
+        </div>
+        <div style={{display: "flex", flexDirection: "column", gap: "10px", alignItems: "center"}}>
+          <button>Log in</button>
+          <button>Forgot Password</button>
+          <button>Sign Up</button>
+        </div>
+      </form>
+    </>
+  )
+}
+
+export default App
+
+{/*
+<>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -116,7 +139,4 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
-}
-
-export default App
+*/}

@@ -1,0 +1,12 @@
+*main.jsx
+- dito ni rurun ung App.jsx, bali cinall dito ung <App /> so kung ano ni return sa App.jsx un
+ma rurun sa main.jsx
+
+*App.jsx
+-this is where you edit the html so para syang index.html 
+
+*./App.css this is a path now the ./ means "look at the current folder" the pathing is initial 
+to the current file your in so if nasa src kana and andun ung App.css use ./App.css (go to this
+current folder and find App.css)
+Pero kung nasa src/components/navbar.jsx and you want to import the App.css then do ../App.css 
+(go back once so nasa src/ kana and find App.css)
