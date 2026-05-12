@@ -1,5 +1,5 @@
 function App() {
-
+  
   return (
     <>
       <form>
@@ -10,7 +10,7 @@ function App() {
             placeholder="Input prefer username"
             style={{marginLeft: "10px"}}
           />
-        </div>
+        </div> 
         <div>
           Password  
           <input

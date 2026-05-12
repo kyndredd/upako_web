@@ -92,5 +92,3 @@ you get the latest repo
 - git config --global credential.helper wincred - para ma bypass
 na ung password once nagpupush
 
-
-- git conf
