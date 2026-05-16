@@ -1,103 +1,19 @@
-import Navbar from "./components/Navbar";
-import "./App.css";
+// import imp lib for hyperlinks
 import { BrowserRouter as Routes } from "react-router-dom";
 import {Link} from "react-router-dom";
-import App_owner from "./assets/images/App_owner.png";
-import App_tenants from "./assets/images/App_tenants.png";
+
+// Import jsx files
+import Navbar from "./components/Navbar";
 import AppRoutes from "./Routes";
 
 function App() {
   
   return (
     <div>
-      <div>
-        <Routes>
-          <AppRoutes />
-        </Routes>
-      </div>
-
-      <div>
+      <Routes>
         <Navbar />
-      </div>
-      <div className="owner_main">
-        <div className="owner_desc">
-          <h1 className="maintext">Rent Owners</h1>
-          <hr></hr>
-          <p className="subtext">
-            Connecting tenants and dorm owners
-          </p>
-          <p className="subtext">
-            in one platform
-          </p>
-          <p className="subtext">
-            Manage tenants, payments, and 
-          </p>
-          <p className="subtext">
-            communication in one place.
-          </p>
-          <button className="btn btn-outline-success button">Look for Tenants</button>
-        </div>
-        <div>
-          <img src={App_owner} alt="image for rent owner" className="owner_image"></img>
-        </div>
-      </div>
-
-      <div className="tenants_main">
-        <div>
-          <img src={App_tenants} alt="image for tenants" className="tenants_image"></img>
-        </div>
-        <div className="tenants_desc">
-          <h1 className="maintext">Tenants</h1>
-          <hr></hr>
-          <p className="subtext">
-            Helping tenants connect with trusted
-          </p>
-          <p className="subtext">
-            dorm owners
-          </p>
-          <p className="subtext">
-            Browse dorms. Compare options.
-          </p>
-          <p className="subtext">
-            Move in easier.
-          </p>
-          <button className="btn btn-outline-success button">Look for Rentals</button>
-        </div>
-      </div>
-
-      <hr></hr>
-
-      <div className="below_desc">
-        <div>
-          <h1 className="b_maintext">Upako</h1>
-          <p>
-            A platform that connects property 
-          </p>  
-          <p>
-            owners and tenants—making it easy
-          </p>
-          <p>
-            to find rentals, manage tenants,
-          </p>  
-          <p>
-            and handle rental businesses in
-          </p> 
-          <p>
-            one place.
-          </p>      
-        </div>
-        <div>
-          <h1>Company</h1>
-          <Routes>
-            <AppRoutes />
-            <Link to="/about" >About</Link>
-          </Routes>
-        </div>
-        <div>
-          <h1>Rental Types</h1>
-        </div>
-      </div>
-      
+        <AppRoutes />
+      </Routes>
     </div>
   );
 }

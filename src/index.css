@@ -36,8 +36,8 @@
 
 body {
   margin: 0;
-  background-color: #171717;
-  color: white;
+  background-color: #292929;
+  color: rgb(255, 255, 255);
 }
 
 #root {
@@ -57,6 +57,7 @@ h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
+  
 }
 
 h1 {

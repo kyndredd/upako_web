@@ -1,0 +1,146 @@
+/* CSS for owner and tenants */
+hr {
+  border: none;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+}
+
+.owner_main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.tenants_main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.owner_desc {
+  text-align: left;
+  padding-top: 50px;
+  padding-left: 200px;
+}
+
+.tenants_desc {
+  text-align: left;
+  padding-top: 50px;
+  padding-right: 200px;
+}
+
+.maintext {
+  font-size: 50px;
+}
+
+.subtext {
+  font-size: 20px;
+}
+
+.button {
+  font-size: 20px !important;
+  margin-top: 20px;
+}
+
+.owner_image {
+  width: 700px;
+  height: auto;
+  padding-top: 50px;
+  padding-right: 200px;
+  padding-left: 50px;
+}
+
+.tenants_image {
+  width: 700px;
+  height: auto;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 50px;
+}
+
+/* CSS for below description */
+
+.below_desc {
+  background-color: #404E3B;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.b_maintext {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.small_desc {
+    margin-left: 50px;
+    text-align: left;
+}
+
+.vertical_line {
+    width: 1px;
+    height: 300px;
+    background-color: black;
+}
+
+.company {
+    margin-left:20px;
+    text-align: left;
+}
+
+.main_links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.links_home {
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.links_home:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.types {
+    margin-left:30px;
+    margin-right: 100px;
+    text-align: left;
+}
+
+.follow {
+    margin-right: 150px;
+}
+
+.follow_text {
+    font-size: 40px;
+}
+
+.picturelogos {
+    display: flex;
+    flex-direction: column;
+}
+
+.fb {
+    width:40px;
+    height: auto;
+}
+
+.twitter {
+    width:100px;
+    height: auto;
+}
+
+.youtube {
+    width:45px;
+    height: auto;
+}
+
+
+
+

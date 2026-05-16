@@ -1,4 +1,41 @@
 .navbar {
-    color: aqua;
+    background-color: #EBFADC;
+    display: flex;
+    height: 65px;
+    width: 100%;
 }
 
+.logo {
+    display: flex; 
+}
+
+.logo_image {
+    width: 120px;
+    height: auto;
+    margin: 0 10px 0;
+}
+
+.options {
+    display: flex;
+    gap: 30px;
+    margin-right: 400px;
+}
+
+.links_nav {
+    text-decoration: none;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    color: black;
+    border-bottom: 3px solid transparent;
+}
+
+.links_nav:hover {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
+    margin-right: 50px;
+}

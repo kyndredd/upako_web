@@ -10,3 +10,7 @@ to the current file your in so if nasa src kana and andun ung App.css use ./App.
 current folder and find App.css)
 Pero kung nasa src/components/navbar.jsx and you want to import the App.css then do ../App.css 
 (go back once so nasa src/ kana and find App.css)
+
+* Must 
+for <Home/> or <Navbar/> it should always a capital letter in first di dapat <home/> or <navbar/> 
+kasi di marerecognize un
