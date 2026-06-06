@@ -1,24 +1,76 @@
 // import imp lib for hyperlinks
-import { BrowserRouter as Routes } from "react-router-dom";
-import {Link} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { useContext } from "react";
+
+// For Context
+import AuthContext from "./context/AuthContext";
+import AuthProvider from "./context/AuthProvider";
 
 // Import jsx files
-import Navbar from "./components/Navbar";
-import AppRoutes from "./Routes";
+import NavbarLayout from "./layouts/NavbarLayout";
+import Home from "./components/Home";
+import FindRentals from "./components/FindRentals";
+import FindTenants from "./components/FindTenants";
+import Dashboard from "./components/Dashboard";
+import Pricing from "./components/Pricing";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import OwnerDashboardLayout from "./layouts/OwnerDashboardLayout";
+import OwnerDashboard from "./components/Dashboard_Owner/OwnerDashboard";
+import OwnerTenantLists from "./components/Dashboard_Owner/OwnerTenantLists";
+import OwnerRentalProperties from "./components/Dashboard_Owner/OwnerRentalProperties";
+import OwnerMessages from "./components/Dashboard_Owner/OwnerMessages";
+import OwnerPayments from "./components/Dashboard_Owner/OwnerPayments";
+import TenantDashboardLayout from "./layouts/TenantDashboardLayout";
+import TenantDashboard from "./components/Dashboard_Tenant/TenantDashboard";
+import TenantFindRentPost from "./components/Dashboard_Tenant/TenantFindRentPost";
+import TenantMessages from "./components/Dashboard_Tenant/TenantMessages";
+import TenantPayment from "./components/Dashboard_Tenant/TenantPayment";
 
 function App() {
-  
+  const { isLogin, usertype } = useContext(AuthContext);
+
+  console.log(isLogin, usertype);
+
   return (
-    <div>
+    <BrowserRouter>
       <Routes>
-        <Navbar />
-        <AppRoutes />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+
+        <Route path="/" element={<NavbarLayout />}>
+          <Route index element={<Home />}/>
+          <Route path="/FindTenants" element={<FindTenants />}/>
+          <Route path="/FindRentals" element={<FindRentals />}/>
+          <Route path="/Pricing" element={<Pricing />} />
+        
+          <Route element={<ProtectedRoute allowedUser="owner" />}>
+            <Route path="/Owner" element={<OwnerDashboardLayout />}>
+              <Route index element={<OwnerDashboard />} />
+              <Route path="/Owner/TenantList" element={<OwnerTenantLists />} />
+              <Route path="/Owner/RentalProperties" element={<OwnerRentalProperties />} />
+              <Route path="/Owner/Messages" element={<OwnerMessages />} />
+              <Route path="/Owner/Payments" element={<OwnerPayments />} />
+            </Route>
+          </Route>
+        
+          <Route element={<ProtectedRoute allowedUser="tenant" />}>
+            <Route path="/Tenant" element={<TenantDashboardLayout />}>
+              <Route index element={<TenantDashboard />} />
+              <Route path="/Tenant/FindRentPost" element={<TenantFindRentPost />} />
+              <Route path="/Tenant/Messages" element={<TenantMessages />} />
+              <Route path="/Tenant/Payment" element={<TenantPayment />} />
+            </Route>
+          </Route>
+        </Route>
       </Routes>
-    </div>
-  );
+    </BrowserRouter>
+  )
 }
 
-export default App
+
+export default App;
 
 {/*
 <>

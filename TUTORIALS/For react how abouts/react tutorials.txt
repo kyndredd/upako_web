@@ -14,3 +14,52 @@ Pero kung nasa src/components/navbar.jsx and you want to import the App.css then
 * Must 
 for <Home/> or <Navbar/> it should always a capital letter in first di dapat <home/> or <navbar/> 
 kasi di marerecognize un
+
+* Standard map
+App.jsx          → navigation map
+AuthProvider     → user identity, and also all of its components are all global means you can 
+                   use it in any jsx files. It is use for authentication or user verification 
+                   and use it for accessing website features if authentication met.
+ProtectedRoute   → access rules
+Layouts          → page structure
+Pages            → UI screens
+Services         → API calls
+Hooks            → reusable logic
+
+src/
+ ├── app/
+ │    └── App.jsx (routes only)
+ │
+ ├── context/
+ │    └── AuthProvider.jsx (user login/auth)
+ │
+ ├── routes/
+ │    └── ProtectedRoute.jsx (role protection)
+ │
+ ├── layouts/
+ │    ├── PublicLayout.jsx (navbar)
+ │    ├── DashboardLayout.jsx (sidebar)
+ │
+ ├── pages/
+ │    ├── Home.jsx
+ │    ├── Login.jsx
+ │    ├── About.jsx
+ │    ├── OwnerDashboard.jsx
+ │    ├── TenantDashboard.jsx
+ │
+ ├── services/
+ │    ├── api.js (fetch calls)
+ │
+ ├── hooks/
+ │    ├── useTenants.js
+ │    ├── useAuth.js
+ │
+ ├── components/
+ │    ├── Navbar.jsx
+ │    ├── Sidebar.jsx
+
+* For ProtectedRoute https://www.youtube.com/watch?v=pyfwQUc5Ssk
+
+* Outlet when you have 
+return <Outlet />; this will means that the child routes under that specific parent route can be 
+access

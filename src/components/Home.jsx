@@ -1,7 +1,7 @@
 import React from 'react'
 
 //For css for Home page
-import "./styles/Home.css"
+import "./styles_components/Home.css"
 
 //For <Link> to function
 import {Link} from "react-router-dom";

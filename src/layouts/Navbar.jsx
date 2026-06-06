@@ -1,13 +1,23 @@
 import React from 'react';
-import "./styles/Navbar.css";
+import { useContext } from 'react';
 
-//For <Link> to function
+// For css
+import "./styles_layouts/Navbar.css";
+
+// For dependencies
 import {Link} from "react-router-dom";
+import AuthContext from '../context/AuthContext';
 
 // For assets for Navbar
 import logo from "../assets/images/Logo.png";
 
+
 const Navbar = () => {
+  const {isLogin, usertype} = useContext(AuthContext);
+
+  // Test if it works
+  console.log(isLogin, usertype, "Navbar");
+
   return (
     <div className='navbar'>
       <div className='logo'>
@@ -20,6 +30,14 @@ const Navbar = () => {
         <Link to="/FindTenants" className='links_nav'>Find Tenants</Link>
         <Link to="/FindRentals" className='links_nav'>Find Rentals</Link>
         <Link to="/Pricing" className='links_nav'>Pricing</Link>
+
+        {isLogin && usertype === "owner" && (
+          <Link to="/Owner">Dashboard</Link>
+        )}
+
+        {isLogin && usertype === "tenant" && (
+          <Link to="/Tenant">Dashboard</Link>
+        )}
       </div>
 
       <div className='buttons'>
