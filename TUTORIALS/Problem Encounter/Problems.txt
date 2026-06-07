@@ -1,0 +1,4 @@
+*user go null even meron ng user sa local storage, what happens is it render faster than the
+useeffect ((inside is the user parsing from local storage)) that is why the user is null on
+the first second then has value when useeffect done.
+Solution: add loading method

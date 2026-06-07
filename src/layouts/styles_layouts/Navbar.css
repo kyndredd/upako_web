@@ -39,3 +39,20 @@
     gap: 30px;
     margin-right: 50px;
 }
+
+.profile {
+    width: 50px;
+    height: auto;
+    margin: 0 10px 0;
+    cursor: pointer
+}
+
+.profile_menu {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+}

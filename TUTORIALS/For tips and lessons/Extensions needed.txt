@@ -1,3 +1,4 @@
 Auto Close Tag by Jun Han- for auto closing tags
 ES7+ React/Redux/React-Native snippets by dsznajder - for shortcut snippets like racfe
-Path Intellisense by Christian Kohler - use for paths para maging auto 
+Path Intellisense by Christian Kohler - use for paths para maging auto
+Prettier - for auto spacing 

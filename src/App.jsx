@@ -27,6 +27,11 @@ import TenantDashboard from "./components/Dashboard_Tenant/TenantDashboard";
 import TenantFindRentPost from "./components/Dashboard_Tenant/TenantFindRentPost";
 import TenantMessages from "./components/Dashboard_Tenant/TenantMessages";
 import TenantPayment from "./components/Dashboard_Tenant/TenantPayment";
+import LoginSignUpLayout from "./layouts/LoginSignUpLayout";
+import SettingsLayout from "./layouts/SettingsLayout";
+import ProfileSettings from "./components/ProfileSettings";
+import SecuritySettings from "./components/SecuritySettings";
+import NotificationSettings from "./components/NotificationSettings";
 
 function App() {
   const { isLogin, usertype } = useContext(AuthContext);
@@ -36,18 +41,28 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-
+        <Route element={<LoginSignUpLayout />}>
+          <Route path="/Login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+        </Route>
+       
         <Route path="/" element={<NavbarLayout />}>
           <Route index element={<Home />}/>
           <Route path="/FindTenants" element={<FindTenants />}/>
           <Route path="/FindRentals" element={<FindRentals />}/>
           <Route path="/Pricing" element={<Pricing />} />
+
+          <Route element={<ProtectedRoute allowedRoles={["owner", "tenant"]} />}>
+            <Route path="/Settings" element={<SettingsLayout />}>
+              <Route index path="/Settings/Profile" element={<ProfileSettings />} />
+              <Route path="/Settings/Security" element={<SecuritySettings />} />
+              <Route path="/Settings/Notification" element={<NotificationSettings />} />
+            </Route>
+          </Route>
         
-          <Route element={<ProtectedRoute allowedUser="owner" />}>
+          <Route element={<ProtectedRoute allowedRoles={["owner"]} />}>
             <Route path="/Owner" element={<OwnerDashboardLayout />}>
-              <Route index element={<OwnerDashboard />} />
+              <Route index path="/Owner/Dashboard" element={<OwnerDashboard />} />
               <Route path="/Owner/TenantList" element={<OwnerTenantLists />} />
               <Route path="/Owner/RentalProperties" element={<OwnerRentalProperties />} />
               <Route path="/Owner/Messages" element={<OwnerMessages />} />
@@ -55,12 +70,12 @@ function App() {
             </Route>
           </Route>
         
-          <Route element={<ProtectedRoute allowedUser="tenant" />}>
+          <Route element={<ProtectedRoute allowedRoles={["tenant"]} />}>
             <Route path="/Tenant" element={<TenantDashboardLayout />}>
-              <Route index element={<TenantDashboard />} />
+              <Route index path="/Tenant/Dashboard" element={<TenantDashboard />} />
               <Route path="/Tenant/FindRentPost" element={<TenantFindRentPost />} />
               <Route path="/Tenant/Messages" element={<TenantMessages />} />
-              <Route path="/Tenant/Payment" element={<TenantPayment />} />
+              <Route path="/Tenant/Payments" element={<TenantPayment />} />
             </Route>
           </Route>
         </Route>

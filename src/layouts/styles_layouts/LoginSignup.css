@@ -1,0 +1,12 @@
+.topbar {
+    background-color: #ffffff;
+    display: flex;
+    height: 65px;
+    width: 100%;
+}
+
+.logo_i {
+    width: 120px;
+    height: auto;
+    margin: 0 10px 0;
+}
