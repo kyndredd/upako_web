@@ -63,3 +63,33 @@ src/
 * Outlet when you have 
 return <Outlet />; this will means that the child routes under that specific parent route can be 
 access
+
+* localStorage - used for storing data from multiple session/tabs means data will not reset even
+  going to other tab
+  sessionstorage - used for storing data from single session/tab means its data will reset when go 
+  to the other tab
+  
+  JSON.stringify({ filter, advancefilter }) looks like: (these are 2 object)
+  {
+  "filter": 
+    {
+        "type": "Condo",
+        "location": "Manila"
+    },
+
+  "advancefilter": 
+    {
+        "fee": "5000-10000",
+        "size": "Small"
+    }
+  }
+
+  JSON.stringify(foundUser) looks like: (these are 1 object)
+  {
+    "id":1,
+    "username":"chuchi",
+    "password":"1234",
+    "role":"tenant"
+  }
+
+  

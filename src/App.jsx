@@ -9,8 +9,8 @@ import AuthProvider from "./context/AuthProvider";
 // Import jsx files
 import NavbarLayout from "./layouts/NavbarLayout";
 import Home from "./components/Home";
-import FindRentals from "./components/FindRentals";
-import FindTenants from "./components/FindTenants";
+import FindRentals from "./components/FindRentals_Page/FindRentals";
+import FindTenants from "./components/FindTenants_Page/FindTenants";
 import Dashboard from "./components/Dashboard";
 import Pricing from "./components/Pricing";
 import Login from "./components/Login";
